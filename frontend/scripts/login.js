@@ -48,4 +48,20 @@ loginButton.addEventListener('click', () => {
       alert('Erro ao realizar login. Por favor, tente novamente mais tarde.');
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const senhaInput = document.getElementById('senha');
+  const showPasswordButton = document.getElementById('showPassword');
+  const eyeIcon = document.getElementById('eye-icon');
+
+  showPasswordButton.addEventListener('click', function() {
+    if (senhaInput.type === 'password') {
+      senhaInput.type = 'text';
+      eyeIcon.src = '../assets/olho-aberto.png';
+    } else {
+      senhaInput.type = 'password';
+      eyeIcon.src = '../assets/olho-fechado.png';
+    }
+  });
+});
   
