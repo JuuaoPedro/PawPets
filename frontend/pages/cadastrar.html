@@ -13,24 +13,33 @@
                 <p>Cadastro de Usuário</p>
             </div>
             <form id="cadastroForm" method="POST">
-                <div id="tabeladepreenchimento">
-                    <input class="espaco" type="text" placeholder="Nome" name="nome">
-                    <input type="text" placeholder="CPF" name="cpf" required>
-                    <input class="espaco" type="text" placeholder="CEP" name="cep" required>
-                    <input type="text" placeholder="Rua" name="rua">
-                    <input class="espaco" type="text" placeholder="Número" name="numero">
-                    <input type="text" placeholder="Complemento" name="complemento">
-                    <input class="espaco" placeholder="Estado" name="estado">
-                    <input class="espaco" type="text" placeholder="Cidade" name="cidade">
-                    <input type="espaco" placeholder="Bairro" name="bairro">
-                    <input class="espaco" type="text" placeholder="Telefone" name="telefone">
-                    <input type="email" placeholder="Email" name="email" required>
-                    <input class="espaco" type="password" placeholder="Senha" name="senha" required>
-                    <input type="password" placeholder="Confirmar Senha" name="confirmarSenha" required>
+                <div id="tabelaDePreenchimento">
+                    <div id="scroll-container">
+                        <div class="scroll-content" id="dadosPessoais">
+                                <input type="text" placeholder="Nome" name="nome">
+                                <input type="text" placeholder="CPF" name="cpf" required>
+                                <input type="text" placeholder="Telefone" name="telefone">
+                                <input type="text" placeholder="Email" name="email" required>
+                                <input type="password" placeholder="Senha" name="senha" required>
+                                <input type="password" placeholder="Confirmar Senha" name="confirmarSenha" required>
+                        </div>
+                        <div class="scroll-content" id="endereco">
+                                <input type="text" placeholder="CEP" name="cep" required>
+                                <input type="text" placeholder="Estado" name="estado">
+                                <input type="text" placeholder="Cidade" name="cidade">
+                                <input type="text" placeholder="Bairro" name="bairro">
+                                <input type="text" placeholder="Rua" name="rua">
+                                <input type="text" placeholder="Número" name="numero">
+                                <input type="text" placeholder="Complemento" name="complemento">                        </div>
+                        <div id="proximosInputs">
+                                <button id="scroll-left">Anterior</button>
+                                <button id="scroll-right">Próximo</button>
+                        </div>
+                    </div>                  
                 </div>
-                <div class="progress-container">
+                <!-- <div class="progress-container">
                     <div class="progress-bar" id="myBar"></div>
-                </div>
+                </div> -->
                 <div class="step" id="step1">
                 </div>
                 <div class="step" id="step2">

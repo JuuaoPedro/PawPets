@@ -188,3 +188,54 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+const scrollLeftBtn = document.getElementById('scroll-left');
+const scrollRightBtn = document.getElementById('scroll-right');
+const scrollContents = document.querySelectorAll('.scroll-content');
+
+let currentIndex = 0;
+
+scrollLeftBtn.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateScrollVisibility(scrollLeftBtn, currentIndex);
+  }
+});
+
+// scrollLeftBtn.onclick = () =>{
+//   const dadosPessoais = document.getElementById('dadosPessoais')
+//   const endereco = document.getElementById('endereco')
+//   // dadosPessoais.classList.toggle('none')
+//   const estilo = dadosPessoais.style.display;
+//   dadosPessoais.style.display = 'none'
+//   endereco.style.display = 'flex'
+// }
+
+// scrollRightBtn.onclick = () =>{
+//   const dadosPessoais = document.getElementById('dadosPessoais')
+//   const endereco = document.getElementById('endereco')
+//   // endereco.classList.toggle('flex')
+//   dadosPessoais.style.display = 'none'
+//   endereco.style.display = 'flex'
+// }
+
+scrollRightBtn.addEventListener('click', () => {
+  if (currentIndex < scrollContents.length - 1) {
+    currentIndex++;
+    updateScrollVisibility(scrollRightBtn, currentIndex);
+  }
+});
+
+function updateScrollVisibility() {
+  scrollContents.forEach((content, index) => {
+    if (index === currentIndex) {
+      content.classList.add('active');
+    } else {
+      content.classList.remove('active');
+    }
+  });
+}
+
+// Inicialize a visibilidade do conteúdo
+updateScrollVisibility();
+

@@ -28,8 +28,8 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 70%;
-    height: 80%;
+    width: 80%;
+    height: 85%;
     border-radius: 50px;
     background-image: linear-gradient(to bottom left, rgba(255,0,0,0), rgba(255, 255, 255, 0.452));
 }
@@ -50,6 +50,15 @@ p {
     margin-bottom: -0.2%;
     margin-top: 5%;
     padding: 10%;
+}
+
+#tabelaDePreenchimento {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 input {
@@ -114,11 +123,6 @@ div {
     margin-bottom: 2.5%;
 }
 
-.espaco {
-    margin-right: 2.5%;
-    margin-left: 13.5%;
-}
-
 .progress-container {
     width: 95%;
     height: 30px;
@@ -147,3 +151,83 @@ div {
     margin: 20px auto;
     max-width: 500px;
 }
+
+#dadospessoais {
+    display: none;
+}
+
+#scroll-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-image: linear-gradient(to bottom left, rgba(255,0,0,0), rgba(255, 255, 255, 0.452));
+  }
+  
+  .scroll-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;    
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  
+  #scroll-left, #scroll-right {
+    width: 75px;
+    height: 75px;
+    background-color: #fc7c04;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 35px;
+  }
+  
+  #scroll-left {
+    border-radius: 120%;
+  }
+  
+  #scroll-right {
+    border-radius: 100%;
+  } 
+  
+  .scroll-content input {
+    display: none;
+  }
+  
+  .scroll-content.active input {
+    display: block;
+  }
+  
+  .scroll-content input {
+    width: 100%;
+    margin: 10px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    outline: none;
+    transition: background-color 0.2s;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 2.5px 2.5px rgba(27, 27, 27, 0.562);
+  }
+  
+  .scroll-content input:focus {
+    border-color: #fc7c04;
+  }
+
+  .scroll-content input {
+    width: 45%;
+}
+
+/* #dadosPessoais{
+    display: flex;
+}
+
+#endereco{
+    display: none;
+} */
